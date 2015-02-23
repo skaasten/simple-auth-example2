@@ -18,6 +18,14 @@ module.exports = function(environment) {
       // when it is created
     }
   };
+  ENV['simple-auth'] = {
+      authenticator: 'simple-auth-authenticator:oauth2-password-grant',
+      authorizer: 'simple-auth-authorizer:oauth2-bearer'
+  };
+  ENV['simple-auth-oauth2'] = {
+      serverTokenEndpoint: 'http://localhost:3000/oauth/token',
+      serverTokenRevocationEndpoint: 'http://localhost:3000/oauth/revoke'
+  };
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
