@@ -20,7 +20,8 @@ module.exports = function(environment) {
   };
   ENV['simple-auth'] = {
       authenticator: 'simple-auth-authenticator:oauth2-password-grant',
-      authorizer: 'simple-auth-authorizer:oauth2-bearer'
+      authorizer: 'simple-auth-authorizer:oauth2-bearer',
+      crossOriginWhitelist: ['http://localhost:3000']
   };
   ENV['simple-auth-oauth2'] = {
       serverTokenEndpoint: 'http://localhost:3000/oauth/token',

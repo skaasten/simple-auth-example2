@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('login');
   this.route('pizza');
   this.route('hi');
+  this.route('snow');
 });
 
 export default Router;
